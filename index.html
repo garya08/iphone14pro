@@ -9,43 +9,48 @@
 	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 	<title>Iphone 14 Pro</title>
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container">
-			<nav class="nav">
+
+			<a href="#" class="logo" data-scroll="#intro">
+				<img class="logo__img" src="assets/images/logo.svg" alt="Logo">
+			</a>
+			<nav class="nav" id="nav">
 				<ul class="menu">
 					<li class="menu__item">
-						<a href="#" class="menu__link">Что нового</a>
+						<a href="#" class="menu__link" data-scroll="#news">Что нового</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">Цвет</a>
+						<a href="#" class="menu__link" data-scroll="#models">Цвет</a>
 					</li>
 					<li class="menu__item">
-						<a href="#" class="menu__link">Заказать</a>
+						<a href="#" class="menu__link" data-scroll="#order">Заказать</a>
 					</li>
 				</ul> <!-- /.menu -->
-
-				<a href="#" class="logo">
-					<img class="logo__img" src="assets/images/logo.svg" alt="Logo">
-				</a>
 				<a class="phone" href="tel:+380504565656">+38 050-456-56-56</a>
 			</nav>
+
+			<button class="nav-toggle" id="nav_toggle" type="button">
+				<span class="nav-toggle__item">Menu</span>
+			</button>
 
 		</div> <!-- /.container -->
 	</header>
 
 
-	<section class="intro">
+	<section class="intro" id="intro">
 		<div class="container">
 			<div class="intro__inner">
 				<h1 class="intro__title">IPHONE 14 PRO</h1>
 				<div class="intro__content">
 					<img class="intro__img" src="assets/images/intro.png" alt="iphone 14">
-					<a class="intro__btn" href="#">Выбрать</a>
+					<a class="intro__btn" href="#" data-scroll="#models">Выбрать</a>
 				</div>
 			</div>
 
@@ -56,7 +61,7 @@
 
 
 
-	<section class="news">
+	<section class="news" id="news">
 		<div class="container">
 			<h1 class="container__title">ЧТО НОВОГО</h1>
 			<div class="news__content">
@@ -79,36 +84,51 @@
 		</div>	<!-- /.container -->	
 	</section> <!-- /.news -->
 
-	<section class="models">
+
+	<section class="models" id="models">
 		<div class="container">
 			<h1 class="container__title">Выбери свой цвет</h1>
 			<div class="models__inner">
 				<div class="models__item">
 					<img class="models__img" src="assets/images/colors/silver.png" alt="iphone 14 - silver">
-					<div class="models__content">
+					<div class="models__content" data-scroll="#order">
 						<div class="models__title">Silver</div>
 						<div class="models__subtitle">Серебристый</div>
 					</div>
 				</div>
 				<div class="models__item">
 					<img class="models__img" src="assets/images/colors/purple.png" alt="iphone 14 - purple">
-					<div class="models__content">
+					<div class="models__content" data-scroll="#order">
 						<div class="models__title">Deep purple</div>
 						<div class="models__subtitle">Темно фиолетовый</div>
 					</div>
 				</div>
 				<div class="models__item">
 					<img class="models__img" src="assets/images/colors/gold.png" alt="iphone 14 - gold">
-					<div class="models__content">
+					<div class="models__content" data-scroll="#order">
 						<div class="models__title">Gold</div>
 						<div class="models__subtitle">Золотой</div>
 					</div>
 				</div>
 				<div class="models__item">
 					<img class="models__img" src="assets/images/colors/black.png" alt="iphone 14 - black">
-					<div class="models__content">
+					<div class="models__content" data-scroll="#order">
 						<div class="models__title">Space Black</div>
 						<div class="models__subtitle">Космический черный</div>
+					</div>
+				</div>
+				<div class="models__item">
+					<img class="models__img" src="assets/images/colors/green.png" alt="iphone 14 - green">
+					<div class="models__content" data-scroll="#order">
+						<div class="models__title">Green</div>
+						<div class="models__subtitle">Изумрудный</div>
+					</div>
+				</div>
+				<div class="models__item">
+					<img class="models__img" src="assets/images/colors/pink.png" alt="iphone 14 - pink">
+					<div class="models__content" data-scroll="#order">
+						<div class="models__title">Pink</div>
+						<div class="models__subtitle">Розовый</div>
 					</div>
 				</div>
 			</div>
@@ -116,7 +136,7 @@
 	</section> <!-- /.models -->
 
 
-	<section class="order">
+	<section class="order" id="order">
 		<div class="container">
 
 			<div class="order__inner">
@@ -147,13 +167,20 @@
 		<div class="container">
 			<div class="footer__inner">
 				<a class="footer__item" href="#">Политика конфиденциальности</a>
-				<a href="#" class="logo">
+				<a href="#" class="logo" data-scroll="#intro">
 					<img class="logo__img" src="assets/images/logo.svg" alt="Logo">
 				</a>
-				<a class="phone" href="tel:+380504565656">+38 050-456-56-56</a>
+				<a class="phone phone--footer" href="tel:+380504565656">+38 050-456-56-56</a>
 			</div>
 
 		</div>
 	</footer>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="assets/js/app.js"></script>
+
 </body>
 </html>
